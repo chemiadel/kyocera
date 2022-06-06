@@ -1,0 +1,272 @@
+@font-face {
+  font-family: 'GTEestiProDisplay-Bold';
+  src: url('/fonts/GTEestiProDisplay-Bold.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@mixin bold {
+  font-family: 'GTEestiProDisplay-Bold';
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-Light';
+  src: url('/fonts/GTEestiProDisplay-Light.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-BoldItalic';
+  src: url('/fonts/GTEestiProDisplay-BoldItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-Regular';
+  src: url('/fonts/GTEestiProDisplay-Regular.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@mixin regular {
+  font-family: 'GTEestiProDisplay-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-LightItalic';
+  src: url('/fonts/GTEestiProDisplay-LightItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-MediumItalic';
+  src: url('/fonts/GTEestiProDisplay-MediumItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-Medium';
+  src: url('/fonts/GTEestiProDisplay-Medium.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-UltraBoldItalic';
+  src: url('/fonts/GTEestiProDisplay-UltraBoldItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-UltraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-ThinItalic';
+  src: url('/fonts/GTEestiProDisplay-ThinItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-UltraBold';
+  src: url('/fonts/GTEestiProDisplay-UltraBold.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-UltraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-Thin';
+  src: url('/fonts/GTEestiProDisplay-Thin.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-RegularItalic';
+  src: url('/fonts/GTEestiProDisplay-RegularItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-UltraLight';
+  src: url('/fonts/GTEestiProDisplay-UltraLight.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-BoldItalic';
+  src: url('/fonts/GTEestiProText-BoldItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProDisplay-UltraLightItalic';
+  src: url('/fonts/GTEestiProDisplay-UltraLightItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProDisplay-UltraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-Bold';
+  src: url('/fonts/GTEestiProText-Bold.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-Light';
+  src: url('/fonts/GTEestiProText-Light.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@mixin light {
+  font-family: 'GTEestiProText-Light';
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-BookItalic';
+  src: url('/fonts/GTEestiProText-BookItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-LightItalic';
+  src: url('/fonts/GTEestiProText-LightItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-Book';
+  src: url('/fonts/GTEestiProText-Book.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-RegularItalic';
+  src: url('/fonts/GTEestiProText-RegularItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-Medium';
+  src: url('/fonts/GTEestiProText-Medium.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@mixin medium {
+  font-family: 'GTEestiProText-Medium';
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-MediumItalic';
+  src: url('/fonts/GTEestiProText-MediumItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-Regular';
+  src: url('/fonts/GTEestiProText-Regular.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-UltraLightItalic';
+  src: url('/fonts/GTEestiProText-UltraLightItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-UltraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-UltraLight';
+  src: url('/fonts/GTEestiProText-UltraLight.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-ThinItalic';
+  src: url('/fonts/GTEestiProText-ThinItalic.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTEestiProText-Thin';
+  src: url('/fonts/GTEestiProText-Thin.woff2') format('woff2'),
+      url('/fonts/GTEestiProText-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+

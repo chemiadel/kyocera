@@ -1,0 +1,32 @@
+.list-files-modal {
+	list-style: none;
+	margin-bottom: 20px;
+
+	li {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		@include medium;
+		color: #000;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+
+		button {
+			margin-left: 20px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #ff2600;
+			cursor: pointer;
+			i {
+				display: flex;
+				width: 15px;
+			}
+		}
+	}
+}

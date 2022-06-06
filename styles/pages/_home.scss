@@ -1,0 +1,146 @@
+main.home {
+	overflow: hidden;
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+section.home {
+	.home-form {
+		padding: 50px 0 50px 0;
+		@include mdq(xs) {
+			padding: 20px 0;
+		}
+
+		&-list {
+			&-item {
+				&:not(:last-child) {
+					margin-bottom: 60px;
+					border-bottom: 1px solid #BEBCBC;
+					@include mdq(xs) {
+						margin-bottom: 30px;
+					}
+				}
+
+				h5 {
+					font-size: 32px;
+					@include medium;
+					color: #000;
+					line-height: 42px;
+					margin-bottom: 30px;
+					@include mdq(xs) {
+						font-size: 20px;
+						margin-bottom: 30px;
+						line-height: 30px;
+					}
+				}
+
+				&-body {
+					display: flex;
+					flex-wrap: wrap;
+
+					.radio {
+						margin-bottom: 40px;
+						@include mdq(xs) {
+							margin-bottom: 30px;
+						}
+		
+						&:not(:last-child) {
+							margin-right: 50px;
+							@include mdq(xs) {
+								margin-right: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.home-information {
+		&-body {
+			background-color: #F2F2F2;
+			padding-top: 100px;
+			padding-bottom: 100px;
+			@include mdq(xs) {
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+
+			.col-lg-6 {
+				@include mdq(xs) {
+					margin-bottom: 20px;
+				}
+			}
+
+			&-item {
+				padding-right: 90px;
+				display: flex;
+				@include mdq(xs) {
+					padding-right: 20px;
+				}
+				
+				&-count {
+					width: 32px;
+					height: 32px;
+					flex-shrink: 0;
+					background-color: #F06400;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 16px;
+					line-height: 24px;
+					@include medium;
+					color: $white;
+					margin-right: 20px;
+				}
+
+				&-body {
+					padding-top: 6px;
+					@include mdq(xs) {
+						padding-top: 0;
+					}
+
+					h5 {
+						font-size: 18px;
+						line-height: 28px;
+						@include medium;
+						margin-bottom: 6px;
+						color: #000;
+						@include mdq(xs-md) {
+							font-size: 16px;
+							line-height: 24px;
+						}
+					}
+					
+					p {
+						font-size: 16px;
+						line-height: 24px;
+						@include light;
+						color: #282828;
+						@include mdq(xs-md) {
+							font-size: 14px;
+							line-height: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		&-button {
+			padding: 60px 0 60px 0;
+			@include mdq(xs) {
+				padding: 15px 0;
+			}
+
+			.btn {
+				@include mdq(xs) {
+					display: flex;
+					width: 100%;
+					padding: 0;
+				}
+			}
+		}
+	}
+}

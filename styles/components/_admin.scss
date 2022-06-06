@@ -1,0 +1,225 @@
+.add-new-button {
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	@include bold;
+	color: #000;
+	background-color: transparent;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+
+.modal-content {
+	h2 {
+		margin-bottom: 50px;
+		font-size: 40px;
+		line-height: 40px;
+		@include regular;
+	}
+
+	h4 {
+		font-size: 20px;
+		line-height: 20px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 20px;
+		margin-bottom: 32px;
+	}
+
+	button {
+		margin-right: 20px;
+	}
+}
+
+
+.is-have-actions:hover .actions {
+	opacity: 1;
+	visibility: visible;
+}
+.actions {
+	position: absolute;
+	z-index: 10;
+	top: -20px;
+	right: -20px;
+	visibility: hidden;
+	opacity: 0;
+	transition: .2s all;
+	display: flex;
+	align-items: center;
+	button {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+		i {
+			display: flex;
+		}
+		&.edit {
+			background-color: #0a9bcd;
+		}
+		&.delete {
+			background-color: rgb(255, 38, 0);
+		}
+	}
+	svg {
+		fill: $white;
+		width: 16px;
+		height: 16px;
+	}
+}
+
+
+
+main.admin {
+	padding-top: 200px;
+	padding-bottom: 200px;
+
+	section.admin {
+		.admin-sidebar {
+			ul {
+				list-style: none;
+				width: 100%;
+				li {
+					width: 100%;
+				}
+			}
+			&-item {
+				width: 100%;
+				button {
+					display: flex;
+					width: 100%;
+					padding: 10px 0;
+					border: none;
+					background-color: transparent;
+					font-size: 14px;
+					line-height: 16px;
+					@include regular;
+					cursor: pointer;
+					&.is-active, &:hover {
+						color: #0D9BCD;
+					}
+				}
+
+				&-dropdown {
+					ul {
+						li {
+							a {
+								display: flex;
+								padding: 10px;
+								font-size: 14px;
+								line-height: 16px;
+								@include regular;
+								color: #000;
+								&.is-active {
+									color: #0D9BCD;
+								}
+								&:hover {
+									text-decoration: underline !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.admin-card {
+			background-color: #D4D4D4;
+			padding: 20px;
+			margin-bottom: 30px;
+
+			h4 {
+				font-size: 24px;
+				line-height: 1.5;
+				color: #000;
+				margin-bottom: 12px;
+				@include regular;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 1.5;
+				color: #282828;
+				@include medium;
+			}
+		}
+
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		thead {
+			tr {
+				background-color: #D4D4D4;
+			}
+			th {
+				@include medium;
+			}
+		}
+
+		tbody td {
+			@include regular;
+		}
+		
+		td, th {
+			border: 1px solid #D4D4D4;
+			text-align: left;
+			padding: 16px;
+		}
+
+		.actions {
+			position: relative;
+			right: 0;
+			top: 0;
+			opacity: 1;
+			visibility: visible;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #D4D4D4;
+		}
+
+		tr td:first-child {
+			width: 50%;
+		}
+		tr td:last-child {
+			width: 20%;
+		}
+	}
+}
+
+
+.admin-body-feedback-form-detail {
+	&-item {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
+
+		h2 {
+			font-size: 30px;
+			line-height: 50px;
+			@include medium;
+			color: #000;
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 20px;
+			@include medium;
+			color: #000;
+		}
+	}
+}

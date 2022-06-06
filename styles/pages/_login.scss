@@ -1,0 +1,83 @@
+main.login .container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+section.login {
+
+	.sso {
+		margin-bottom: 40px !important;
+	}
+
+	.external-link {
+		margin-bottom: 40px;
+	}
+
+	.row {
+		padding-left: 0;
+		@include mdq(xs-md) {
+			flex-direction: column-reverse;
+		}
+		.col-lg-6 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.login-body {
+		padding: 100px 140px 100px 90px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include mdq(xs-md) {
+			padding: 40px 15px;
+		}
+
+		h3 {
+			font-size: 45px;
+			@include medium;
+			color: #000;
+			margin-bottom: 50px;
+			@include mdq(xs) {
+				font-size: 28px;
+			}
+		}
+
+		&-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include mdq(xs) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+
+			.btn {
+				@include mdq(xs) {
+					width: 100%;
+					display: flex;
+				}
+			}
+
+			a {
+				font-size: 16px;
+				line-height: 24px;
+				@include regular;
+				color: #000;
+				text-decoration: underline !important;
+				@include mdq(xs) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	.login-illustration {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

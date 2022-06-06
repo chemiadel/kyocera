@@ -1,0 +1,609 @@
+main.detail {
+	overflow: hidden;
+	.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.section-head {
+		height: 200px;
+	}
+
+	.section-hero {
+		&-image {
+			height: 100%;
+			&-contain {
+				height: 100%;
+			}
+		}
+	}
+}
+
+section.detail {
+	padding: 50px 0;
+	@include mdq(xs) {
+		padding: 20px 0;
+	}
+
+	.detail-item {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+			@include mdq(xs) {
+				margin-bottom: 20px;
+			}
+		}
+		
+		h4 {
+			font-size: 32px;
+			@include medium;
+			color: #000;
+			line-height: 40px;
+			margin-bottom: 30px;
+			@include mdq(xs) {
+				font-size: 20px;
+				line-height: 30px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.section-tab {
+			margin-bottom: 30px;
+			@include mdq(xs) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&-flags {
+			margin-bottom: 95px;
+			@include mdq(xs-md) {
+				margin-bottom: 20px;
+			}
+
+			&-item {
+				&:not(:last-child) {
+					margin-bottom: 100px;
+					@include mdq(xs-md) {
+						margin-bottom: 20px;
+					}
+				}
+
+				h5 {
+					font-size: 28px;
+					@include medium;
+					color: #282828;
+					line-height: 34px;
+					margin-bottom: 24px;
+					@include mdq(xs-md) {
+						margin-bottom: 12px;
+						font-size: 20px;
+						line-height: 24px;
+					}
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		&-list {
+			&-item {
+				background-color: #D4D4D4;
+				border: none;
+				display: flex;
+				text-align: left;
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				padding: 0;
+				cursor: pointer !important;
+				align-items: stretch;
+				position: relative;
+
+				.actions {
+					opacity: 1;
+					visibility: visible;
+					right: -40px;
+					flex-direction: column;
+					top: 50%;
+					transform: translateY(-50%);
+
+					button {
+						margin-right: 0;
+						&.edit {
+							margin-bottom: 20px;
+						}
+					}
+				}
+
+				&.is-open {
+					.detail-item-list-item-body {
+						h5 {
+							margin-bottom: 20px;
+						}
+						&-title {
+							h5 {
+								margin-bottom: 0;
+							}
+						}
+					}
+					.detail-item-list-item-icon i {
+						transform: rotate(180deg);
+					}
+				}
+
+				&.is-default {
+					.item-asset::before {
+						background-color: #0D9BCD;
+					}
+					&.is-open {
+						.detail-item-list-item-body {
+							.item {
+								h5 {
+									margin-bottom: 0;
+								}
+							}
+							.item.is-active {
+								h5 {
+									color: #0D9BCD;
+								}
+							}
+						}
+					}
+					.detail-item-list-item-icon {
+						background-color: #0D9BCD;
+					}
+				}
+
+				&.is-orange {
+					.item-asset::before {
+						background-color: #F06400;
+					}
+					.detail-item-list-item-icon {
+						background-color: #F06400;
+					}
+
+					.detail-item-list-item-body a {
+						color: #F06400;
+					}
+				}
+
+				&.is-purple {
+					.item-asset::before {
+						background-color: #6E3CBE;
+					}
+					.detail-item-list-item-icon {
+						background-color: #6E3CBE;
+					}
+
+					.detail-item-list-item-body a {
+						color: #6E3CBE;
+					}
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 32px;
+					@include mdq(xs) {
+						margin-bottom: 20px;
+					}
+				}
+
+				&-body {
+					padding: 20px;
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					@include mdq(xs) {
+						padding: 12px;
+					}
+
+					&-title h5 {
+						text-decoration: underline;
+					}
+
+					h5 {
+						font-size: 18px;
+						@include regular;
+						color: #000;
+						@include mdq(xs) {
+							font-size: 16px;
+						}
+					}
+
+					a {
+						color: #0D9BCD;
+						word-break: break-all;
+					}
+
+					&-content {
+						margin-bottom: 12px;
+
+						ol, ul {
+							padding-left: 12px;
+						}
+
+						p, li {
+							font-size: 16px;
+							@include light;
+							color: #282828;
+							line-height: 24px;
+						}
+					}
+
+					table {
+						font-family: arial, sans-serif;
+						border-collapse: collapse;
+						table-layout: fixed;
+						width: 100%;
+					}
+					
+					td, th {
+						border: 1px solid #000;
+						text-align: left;
+						padding: 8px;
+						font-size: 16px;
+						color: #282828;
+						line-height: 24px;
+					}
+
+					td {
+						@include light;
+						ul, ol {
+							padding-left: 20px;
+						}
+					}
+					th {
+						@include bold;
+					}
+					
+					tr:nth-child(even) {
+						background-color: #c4c4c4;
+					}
+
+					.item:not(:last-child) {
+						margin-bottom: 30px;
+					}
+
+					.item-asset {
+						display: flex;
+						align-items: center;
+						&::before {
+							content: '';
+							display: flex;
+							flex-shrink: 0;
+							width: 20px;
+							height: 20px;
+							margin-right: 12px;
+						}
+					}
+				}
+
+				&-icon {
+					width: 60px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@include mdq(xs) {
+						width: 40px;
+					}
+
+					i {
+						display: flex;
+
+						svg {
+							height: 14px;
+							@include mdq(xs) {
+								height: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.detail-to-top {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 60px;
+		@include mdq(xs-md) {
+			margin-top: 30px;
+		}
+
+		button {
+			transform: rotate(270deg);
+			padding: 0;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 1px solid #000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: transparent;
+			cursor: pointer !important;
+			@include mdq(xs-md) {
+				width: 40px;
+				height: 40px;
+			}
+
+			i {
+				display: flex;
+				svg {
+					height: 20px;
+					stroke: #000;
+				}
+			}
+		}
+	}
+}
+
+
+
+.detail-item-list-journey-card {
+	background-color: #D4D4D4;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	.item-asset {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		margin-left: 20px;
+		a {
+			color: #0B9BCD;
+		}
+		&::before {
+			content: '';
+			display: flex;
+			flex-shrink: 0;
+			width: 20px;
+			height: 20px;
+			margin-right: 12px;
+			background-color: #0B9BCD;
+		}
+	}
+
+	&-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 18px;
+    font-family: "GTEestiProDisplay-Regular";
+    font-weight: normal;
+    font-style: normal;
+    color: #000;
+		cursor: pointer !important;
+		padding: 20px;
+	}
+
+	.actions {
+		opacity: 1;
+		visibility: visible;
+		flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40px;
+
+		button {
+			margin-right: 0;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	&-body {
+		&-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 18px;
+			font-family: "GTEestiProDisplay-Regular";
+			font-weight: normal;
+			font-style: normal;
+			color: #000;
+			cursor: pointer !important;
+			padding: 20px 0px 12px 20px;
+			color: #0B9BCD;
+			@include mdq(xs) {
+				font-size: 14px;
+			}
+		}
+
+		&-description {
+			padding: 0 0px 20px 20px;
+			p {
+				font-size: 16px;
+				line-height: 20px;
+				color: #000;
+			}
+			@include mdq(xs) {
+				p {
+					font-size: 12px;
+					line-height: 20px;
+					color: #000;
+				}
+			}
+		}
+
+		&-cards {
+			margin: 0 20px 20px 20px;
+			background-color: $white;
+			padding: 20px;
+			@include mdq(xs) {
+				padding: 10px 0;
+				margin: 0;
+
+			}
+			&.is-pain {
+				.item-asset {
+					display: flex;
+					align-items: center;
+					margin-bottom: 20px;
+					margin-left: 20px;
+					a {
+						color: #F5B400;
+					}
+					&::before {
+						content: '';
+						display: flex;
+						flex-shrink: 0;
+						width: 20px;
+						height: 20px;
+						margin-right: 12px;
+						background-color: #F5B400;
+					}
+				}
+				.detail-item-list-journey-card-body-cards-title {
+					color: #F5B400;
+				}
+				.detail-item-list-journey-card-body-cards-body-item-head-label,
+				.detail-item-list-journey-card-body-cards-body-item-icon {
+					background-color: #F5B400;
+				}
+			}
+
+			&.is-need {
+				.item-asset {
+					display: flex;
+					align-items: center;
+					margin-bottom: 20px;
+					margin-left: 20px;
+					a {
+						color: #F06400;
+					}
+					&::before {
+						content: '';
+						display: flex;
+						flex-shrink: 0;
+						width: 20px;
+						height: 20px;
+						margin-right: 12px;
+						background-color: #F06400;
+					}
+				}
+				.detail-item-list-journey-card-body-cards-title {
+					color: #F06400;
+				}
+				.detail-item-list-journey-card-body-cards-body-item-head-label,
+				.detail-item-list-journey-card-body-cards-body-item-icon {
+					background-color: #F06400;
+				}
+			}
+
+			&-title {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 18px;
+				font-family: "GTEestiProDisplay-Regular";
+				font-weight: normal;
+				font-style: normal;
+				margin: 10px 0;
+				padding: 0 20px;
+			}
+			
+			&-body {
+				&-item {
+					background-color: #D4D4D4;
+					display: flex;
+					justify-content: space-between;
+					position: relative;
+
+					&-head {
+						display: flex;
+						width: 100%;
+						min-height: 60px;
+						cursor: pointer !important; 
+
+						&-label {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							color: #fff;
+							width: 80px;
+							font-size: 14px;
+							@include bold;
+						}
+
+						&-title {
+							display: flex;
+							align-items: center;
+							width: 100%;
+							padding: 10px 20px;
+							font-size: 18px;
+							font-family: "GTEestiProDisplay-Regular";
+							font-weight: normal;
+							font-style: normal;
+							@include mdq(xs) {
+								font-size: 14px;
+							}
+						}
+					}
+
+					&-body {
+						&-description {
+							padding: 12px 20px 20px 32px;
+							font-size: 16px;
+							line-height: 20px;
+							color: #000;
+							@include mdq(xs) {
+								font-size: 12px;
+							}
+						}
+					}
+
+					&-content {
+						width: 100%;
+					}
+
+					&-icon {
+						width: 60px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background-color: #0B9BCD;
+						cursor: pointer !important; 
+						&.is-rotate svg {
+							transform: rotate(180deg);
+						}
+						svg {
+							height: 14px;
+						}
+						@include mdq(xs) {
+							width: 30px;
+						}
+					}
+					.actions {
+						right: -35px;
+					}
+				}	
+			}
+		}
+	}
+
+	&-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+	}
+
+	&-icon {
+		width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		background-color: #0B9BCD;
+		cursor: pointer !important; 
+		&.is-rotate svg {
+			transform: rotate(180deg);
+		}
+		svg {
+			height: 14px;
+		}
+		@include mdq(xs) {
+			width: 30px;
+		}
+	}
+}

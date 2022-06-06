@@ -1,0 +1,68 @@
+.step {
+    color: #505050;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    align-items: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+    margin-left: -14px;
+    @for $i from 1 to 10 {
+        &.grow-#{$i} {
+            flex-grow: #{$i}
+        }
+    }
+    &.gray {
+        background: #D4D4D4;
+        &:after {
+            border-left: 15px solid #D4D4D4;
+        }
+    }
+    &.green {
+        background: #0d8449;
+        color: #fff;
+        &:after {
+            border-left: 15px solid #0d8449;
+        }
+    }
+    &.white {
+        background: #F2F2F2;
+        &:after {
+            border-left: 15px solid #F2F2F2;
+        }
+    }
+    &.blue {
+        background: #0261BB;
+        color: #fff;
+        &:after {
+            border-left: 15px solid #0261BB;
+        }
+    }
+    &:before,
+    &:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-top: 23px solid transparent;
+        border-bottom: 23px solid transparent;
+        position: absolute;
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+    &:before {
+        border-left: 17px solid #fff;
+        right: -19px;
+    }
+    &:after {
+        right: -14px;
+    }
+    span {
+        margin-left: 14px;
+        @include mdq(xs-md) {
+            margin-right: -30px;
+            font-size: 12px;
+        }
+    }
+    }

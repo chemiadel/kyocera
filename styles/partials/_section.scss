@@ -1,0 +1,279 @@
+.section-head {
+	background-color: $white;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 19;
+	transition: .5s box-shadow;
+	
+	&.has-shadow {
+		box-shadow: 10px 10px 50px rgba(0, 0, 0, .16);
+	}
+
+	&-selections {
+		display: flex;
+		overflow: auto;
+		padding-bottom: 46px;
+		margin-bottom: 42px;
+		border-bottom: 1px solid #BEBCBC;
+		@include mdq(xs-md) {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		.radio {
+			flex-shrink: 0;
+
+			&:not(:last-child) {
+				margin-right: 50px;
+			
+				@include mdq(xs-md) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+.section-tab {
+	padding-top: 20px;
+	margin-top: -20px;
+	padding-left: 100px;
+	margin-left: -100px;
+	overflow: auto;
+	
+	&.is-orange li.is-active a {
+		border-color: #F06400;
+	}
+
+	&.is-green li.is-active a {
+		border-color: #28a745;
+	}
+
+	&.is-purple li.is-active a {
+		border-color: #6E3CBE;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #BEBCBC;
+
+		li {
+			flex-shrink: 0;
+
+			&.is-need a {
+				border-bottom-color: #F06400 !important;
+			}
+			&.is-pain a {
+				border-bottom-color: #F5B400 !important;
+			}
+
+			&:not(:last-child) {
+				margin-right: 28px;
+			}
+
+			&.is-active a {
+				border-color: #0D9BCD;
+				@include medium;
+			}
+
+			a {
+				border-bottom: 4px solid transparent;
+				display: flex;
+				padding-bottom: 12px;
+				font-size: 25px;
+				@include light;
+				position: relative;
+				color: #282828;
+				@include mdq(xs-md) {
+					font-size: 14px;
+					line-height: 20px;
+					border-bottom-width: 4px;
+					padding-bottom: 12px;
+				}
+
+				&:hover .actions {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+
+.section-hero {
+	background-color: #F2F2F2;
+	position: relative;
+	height: 350px;
+	padding-top: 0;
+	@include mdq(xs) {
+		height: auto;
+	}
+	@include mdq(md) {
+		height: 400px;
+	}
+
+	.container {
+		height: 100%;
+		@include mdq(xs) {
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 100%;
+		}
+		.row {
+			height: 100%;
+			@include mdq(xs) {
+				flex-direction: column-reverse;
+			}
+	
+			.col-lg-6:nth-child(2) {
+				position: absolute;
+				right: 0;
+				padding-right: 0;
+				height: 100%;
+				top: 0;
+				@include mdq(xs) {
+					position: relative;
+					height: auto;
+					top: 0;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	.padding-13{
+		padding-right: 13px;
+	}
+	&-body {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include mdq(xs) {
+			padding: 50px 15px;
+		}
+
+		h2 {
+			font-size: 50px;
+			@include medium;
+			color: #000;
+			z-index: 1;
+			@include mdq(xs) {
+				font-size: 24px;
+			}
+		}
+
+		h5 {
+			margin-top: 20px;
+			font-size: 30px;
+			@include medium;
+			color: #282828;
+			line-height: 24px;
+			z-index: 1;
+			@include mdq(xs) {
+				font-size: 14px;
+				line-height: 20px;
+				margin-top: 12px;
+			}
+		}
+	}
+
+	&-image {
+		height: 100%;
+		@include mdq(xs) {
+			height: auto;
+		}
+	
+		&-contain {
+			width: 100%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		&-hand {
+			position: absolute;
+			right: 10%;
+			transform: translateY(-100%);
+			width: 50%;
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 200px;
+			@include mdq(xs) {
+				display: none;
+			}
+			svg {
+				@include mdq(md) {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+.section-information {
+	background-color: #D4D4D4;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+
+	.container {
+		@include mdq(xs) {
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&-body {
+		padding: 32px 85px 32px 0;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		@include mdq(xs) {
+			padding: 20px 15px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 28px;
+			@include light;
+			color: #282828;
+			@include mdq(xs-md) {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	&-icon {
+		width: 85px;
+		background-color: #282828;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		position: absolute;
+		right: 0;
+		height: 100%;
+		top: 0;
+		@include mdq(xs) {
+			position: relative;
+		}
+	}
+}

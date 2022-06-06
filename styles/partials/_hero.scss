@@ -1,0 +1,43 @@
+.hero {
+	height: 678px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 96px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	@media (min-width: 1800px) {
+		height: 1100px;
+	}
+	@include mdq(xs) {
+		height: 510px;
+		margin-bottom: 60px;
+	}
+
+	&.is-home {
+		@include mdq(xs) {
+			height: 210px;
+		}
+	}
+
+	h1 {
+		font-size: 60px;
+		line-height: 60px;
+		@include bold;
+		color: $white;
+		margin-bottom: 24px;
+		@include mdq(xs) {
+			font-size: 40px;
+			line-height: 40px;
+		}
+	}
+
+	p {
+		font-size: 16px;
+		@include regular;
+		color: $white;
+		line-height: 20px;
+	}
+}

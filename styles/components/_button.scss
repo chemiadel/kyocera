@@ -1,0 +1,75 @@
+.btn {
+	padding: 0 30px;
+	height: 50px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 18px;
+	line-height: 28px;
+	@include bold;
+	border: none;
+	cursor: pointer;
+	@include mdq(xs) {
+		font-size: 14px;
+		line-height: 20px;
+		padding: 0 20px;
+		height: 40px;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+
+	&.btn-primary {
+		background-color: #0a9bcd;
+		color: $white;
+	}
+
+	&.btn-danger {
+		background-color: rgb(255, 38, 0);
+		color: $white;
+	}
+
+	i {
+		display: flex;
+		margin-right: 12px;
+		path {
+			fill: $white;
+		}
+	}
+
+	// Disabled comes first so active can properly restyle
+	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		@include box-shadow(none);
+	}
+
+	&:not(:disabled):not(.disabled) {
+		cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+
+		&:active,
+		&.active {
+			@include box-shadow($btn-active-box-shadow);
+
+			&:focus {
+				@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+			}
+		}
+	}
+}
+
+//
+// Block button
+//
+
+.btn-block {
+	display: block;
+	width: 100%;
+
+	// Vertically space out multiple block buttons
+	+ .btn-block {
+		margin-top: $btn-block-spacing-y;
+	}
+}
